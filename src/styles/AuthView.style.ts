@@ -14,4 +14,5 @@ export const SubNav = styled.nav`
   height: 80%;
   margin: 5% 10%;
   background-color: white;
+  display: flex;
 `;
