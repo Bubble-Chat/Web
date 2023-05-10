@@ -1,45 +1,36 @@
 import styled from "styled-components";
-import AddFriendSvg from "../../../../asset/sidebar/Header/AddFriend.svg";
-import AddRoomSvg from "../../../../asset/sidebar/Header/AddRoom.svg";
-import SearchSvg from "../../../../asset/sidebar/Header/Search.svg";
 
-export const AddFriendIcon = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(${AddFriendSvg});
+export const IconElement = styled.div`
+  width: 2rem;
+  height: 2rem;
   background-size: cover;
-  &:hover {
-    filter: contrast(10%);
-  }
-`;
-export const AddRoomIcon = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(${AddRoomSvg});
-  background-size: cover;
-  &:hover {
-    filter: contrast(10%);
-  }
-`;
-export const SearchIcon = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(${SearchSvg});
-  background-size: cover;
-  &:hover {
-    filter: contrast(10%);
-  }
+  background-color: gray;
+  margin-left: 1.5rem;
 `;
 
 export const IconContainer = styled.nav`
-  width: 10rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
+
+/**
+ * &:hover {
+    filter: contrast(10%);
+  }
+ */
 
 export const MainHeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  width: 90%;
+  padding: 3% 5%;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+`;
+
+export const TitleElement = styled.p`
+  font-size: 1.5rem;
+  font-weight: 650;
+  color: #515151;
+  letter-spacing: 0.2rem;
 `;

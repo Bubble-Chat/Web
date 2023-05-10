@@ -2,36 +2,18 @@ import React from "react";
 import * as S from "./SidebarHeader.style";
 
 interface IHeaderProps {
+  title: string;
   index: number;
 }
 
 const SidebarHeader = (props: IHeaderProps) => {
   return (
     <S.MainHeaderContainer>
-      {props.index === 3 ? (
-        <p>친구창</p>
-      ) : props.index === 2 ? (
-        <p>채팅창</p>
-      ) : props.index === 1 ? (
-        <p>저장소</p>
-      ) : (
-        <p>설정</p>
-      )}
+      <S.TitleElement>{props.title}</S.TitleElement>
       <S.IconContainer>
-        {props.index === 3 ? (
-          <>
-            <S.AddFriendIcon></S.AddFriendIcon>
-            <S.AddRoomIcon></S.AddRoomIcon>
-            <S.SearchIcon></S.SearchIcon>
-          </>
-        ) : props.index === 2 ? (
-          <>
-            <S.AddRoomIcon></S.AddRoomIcon>
-            <S.SearchIcon></S.SearchIcon>
-          </>
-        ) : props.index === 1 ? (
-          <S.SearchIcon></S.SearchIcon>
-        ) : null}
+        {props.index === 1 ? <S.IconElement /> : null}
+        {props.index !== 3 && props.index !== 4 ? <S.IconElement /> : null}
+        {props.index === 4 ? null : <S.IconElement />}
       </S.IconContainer>
     </S.MainHeaderContainer>
   );
