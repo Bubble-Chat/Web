@@ -2,7 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./pages/App";
 import Auth from "./pages/Auth";
-import Home from "./pages/Home";
+import Freind from "./pages/Friend";
+import Room from "./pages/Room";
+import Setting from "./pages/Setting";
+import Storage from "./pages/Storage";
 
 const Router = () => {
   return (
@@ -10,7 +13,10 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Freind />} />
+        <Route path="/rooms" element={<Room />} />
+        <Route path="/storage" element={<Storage />} />
+        <Route path="/setting" element={<Setting />} />
       </Routes>
     </BrowserRouter>
   );
