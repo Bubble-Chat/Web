@@ -26,6 +26,7 @@ export const IconElement = styled.div`
     filter: contrast(10%);
   }
 `;
+
 /*
 &:hover {
     filter: contrast(10%);

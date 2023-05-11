@@ -7,3 +7,9 @@ export const MainContainer = styled.nav`
   background-color: aliceblue;
   overflow: hidden;
 `;
+
+export const SideBarContentsContainer = styled.div`
+  width: 100%;
+  height: 86%;
+  overflow: auto;
+`;
