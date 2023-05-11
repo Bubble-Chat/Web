@@ -12,50 +12,6 @@ const Room = () => {
           <RoomContentsBox />
           <RoomContentsBox />
           <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
-          <RoomContentsBox />
         </>
       </SideBar>
     </>
