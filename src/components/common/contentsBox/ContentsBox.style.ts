@@ -8,6 +8,12 @@ export const MainContainerBox = styled.nav`
   border-bottom: 1px solid #e9e9e9;
   display: flex;
   align-items: center;
+  &:hover {
+    background-color: #f6f6f6;
+  }
+  &:active {
+    background-color: #f1f1f1;
+  }
 `;
 
 export const FriendImage = styled.div`
