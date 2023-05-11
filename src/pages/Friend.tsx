@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "../components/common/sidebar/SideBar";
 import FriendContentsBox from "../components/common/contentsBox/FriendContentsBox";
+import MainBackground from "../components/common/contents/MainBackground";
 
 const Friend = () => {
   return (
@@ -33,8 +34,54 @@ const Friend = () => {
             introduce="안녕하세요"
             id="gmbae06@gmail.com"
           />
+          <FriendContentsBox
+            name="우영기"
+            introduce="안녕하세요 안드 싸개 입니다."
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="이재진"
+            introduce="안녕하세요 서버 싸개 입니다"
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="김민균"
+            introduce="안녕하세요"
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="우영기"
+            introduce="안녕하세요 안드 싸개 입니다."
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="이재진"
+            introduce="안녕하세요 서버 싸개 입니다"
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="김민균"
+            introduce="안녕하세요"
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="우영기"
+            introduce="안녕하세요 안드 싸개 입니다."
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="이재진"
+            introduce="안녕하세요 서버 싸개 입니다"
+            id="gmbae06@gmail.com"
+          />
+          <FriendContentsBox
+            name="김민균"
+            introduce="안녕하세요"
+            id="gmbae06@gmail.com"
+          />
         </>
       </SideBar>
+      <MainBackground></MainBackground>
     </>
   );
 };

@@ -10,9 +10,17 @@ export const Icon = styled.div`
 export const ContentsContainer = styled.nav`
   display: flex;
   align-items: center;
-  width: 92%;
+  width: 86%;
   height: 1.5rem;
-  padding: 4%;
+  padding: 3%;
+  margin: 4%;
+  border-radius: 0.5rem;
+  &:hover {
+    background-color: #f3edff;
+  }
+  &:active {
+    background-color: #ede4ff;
+  }
 `;
 
 export const ContentsContext = styled.p`
