@@ -3,7 +3,7 @@ import React from "react";
 function App() {
   return (
     <>
-      <div>dd</div>
+      <div>404 페이지입니다.</div>
     </>
   );
 }
