@@ -43,10 +43,11 @@ const Friend = () => {
     <>
       <SideBar title="친구창" index={1}>
         <>
-          {value.map((val) => {
+          {value.map((val, index) => {
             console.log(val.isMe ? true : false);
             return (
               <FriendContentsBox
+                key={index}
                 name={val.name}
                 introduce={val.introduce}
                 id={val.id}
