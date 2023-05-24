@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "../components/common/sidebar/SideBar";
 import RoomContentsBox from "../components/common/contentsBox/RoomContentsBox";
+import ContentsBox from "../components/common/contents/ContentsBox";
 
 const Room = () => {
   return (
@@ -30,6 +31,7 @@ const Room = () => {
           <RoomContentsBox name="백룸" lastMessage="노현우" NumOfPersons={11} />
         </>
       </SideBar>
+      <ContentsBox friend={{ title: "ddd" }} />
     </>
   );
 };

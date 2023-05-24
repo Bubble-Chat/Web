@@ -1,7 +1,7 @@
 import React from "react";
 import SideBar from "../components/common/sidebar/SideBar";
 import FriendContentsBox from "../components/common/contentsBox/FriendContentsBox";
-import MainBackground from "../components/common/contents/MainBackground";
+import ContentsBox from "../components/common/contents/ContentsBox";
 
 interface Ivalue {
   name: string;
@@ -57,7 +57,7 @@ const Friend = () => {
           })}
         </>
       </SideBar>
-      <MainBackground></MainBackground>
+      <ContentsBox friend={{ title: "ddd" }} />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "../components/common/sidebar/SideBar";
 import * as S from "../styles/pages/Setting.style";
+import ContentsBox from "../components/common/contents/ContentsBox";
 
 const Setting = () => {
   return (
@@ -25,7 +26,7 @@ const Setting = () => {
           </S.ContentsContainer>
         </>
       </SideBar>
-      <div>Setting</div>
+      <ContentsBox friend={{ title: "ddd" }} />
     </>
   );
 };
