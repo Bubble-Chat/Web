@@ -5,11 +5,13 @@ export const IconElement = styled.div`
   height: 2rem;
   background-size: cover;
   background-color: gray;
-  margin-left: 1.5rem;
 `;
 
 export const IconContainer = styled.nav`
   display: flex;
+  justify-content: space-between;
+  width: 30%;
+  background-color: blue;
 `;
 
 /**
