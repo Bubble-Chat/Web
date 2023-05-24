@@ -26,10 +26,6 @@ const SidebarFooter = (props: IFooterProps) => {
         onClick={() => Navigate("/rooms")}
       />
       <S.IconElement
-        isActive={currentLoaction === "storage"}
-        onClick={() => Navigate("/storage")}
-      />
-      <S.IconElement
         isActive={currentLoaction === "setting"}
         onClick={() => Navigate("/setting")}
       />

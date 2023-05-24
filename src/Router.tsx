@@ -5,7 +5,6 @@ import Auth from "./pages/Auth";
 import Freind from "./pages/Friend";
 import Room from "./pages/Room";
 import Setting from "./pages/Setting";
-import Storage from "./pages/Storage";
 
 const Router = () => {
   return (
@@ -15,7 +14,6 @@ const Router = () => {
         <Route path="/auth" element={<Auth />} />
         <Route path="/home" element={<Freind />} />
         <Route path="/rooms" element={<Room />} />
-        <Route path="/storage" element={<Storage />} />
         <Route path="/setting" element={<Setting />} />
       </Routes>
     </BrowserRouter>
