@@ -26,7 +26,7 @@ const Setting = () => {
           </S.ContentsContainer>
         </>
       </SideBar>
-      <ContentsBox friend={{ title: "ddd" }} />
+      <ContentsBox setting={{ title: "setting" }} />
     </>
   );
 };

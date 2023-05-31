@@ -31,7 +31,7 @@ const Room = () => {
           <RoomContentsBox name="백룸" lastMessage="노현우" NumOfPersons={11} />
         </>
       </SideBar>
-      <ContentsBox friend={{ title: "ddd" }} />
+      <ContentsBox room={{ title: "ddd" }} />
     </>
   );
 };
