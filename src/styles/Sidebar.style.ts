@@ -5,6 +5,7 @@ export const MainContainer = styled.nav`
   height: 100%;
   width: 30%;
   overflow: hidden;
+  background-color: white;
 `;
 
 export const SideBarContentsContainer = styled.div`
