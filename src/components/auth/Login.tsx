@@ -22,10 +22,10 @@ export const Login = () => {
         <S.Title>Login</S.Title>
         <S.LoginBtnWrap>
           <S.LoginBtn onClick={googleSocialLogin}>구글로 시작하기</S.LoginBtn>
-          <S.LoginBtn onClick={googleSocialLogin}>카카오로 시작하기</S.LoginBtn>
-          <S.LoginBtn onClick={googleSocialLogin}>네이버로 시작하기</S.LoginBtn>
+          {/* <S.LoginBtn onClick={googleSocialLogin}>카카오로 시작하기</S.LoginBtn>
+          <S.LoginBtn onClick={googleSocialLogin}>네이버로 시작하기</S.LoginBtn> */}
         </S.LoginBtnWrap>
-        <S.LoginStateBtn onClick={() => Navigate("/home")}>
+        <S.LoginStateBtn onClick={() => Navigate("/home/")}>
           계정이 있다면 로그인하기
         </S.LoginStateBtn>
       </S.ContentContainer>
