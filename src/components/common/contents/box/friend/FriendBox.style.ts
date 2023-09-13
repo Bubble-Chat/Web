@@ -29,11 +29,13 @@ export const StatusTitle = styled.p`
 `;
 export const StatusMessage = styled.p`
   font-size: 1rem;
+  word-break: keep-all;
 `;
 
 export const MainContainer = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-color: white;
   width: 30rem;
