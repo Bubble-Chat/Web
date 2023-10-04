@@ -42,6 +42,7 @@ export const LoginBtn = styled.p`
 `;
 
 export const LoginStateBtn = styled.p`
+  margin-top: 1rem;
   color: #9867ff;
   font-weight: 600;
   font-size: 0.8rem;
