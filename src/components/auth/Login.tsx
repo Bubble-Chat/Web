@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "../../styles/Login.style";
 import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
 import API from "../../util/Api";
-
+import { toast } from "react-toastify";
 export const Login = () => {
   const Navigate = useNavigate();
   // const googleSocialLogin = useGoogleLogin({
@@ -54,13 +54,14 @@ export const Login = () => {
           <GoogleLogin
             onSuccess={(res) => {
               console.log(res);
-              API.post("/api/v1/user/signin", null, {
-                params: {
-                  provider: "google",
-                  token: res.credential,
-                },
+              API.post("/api/v1/user/signin", {
+                email: "gmbae06@dgsw.hs.kr",
+                name: "2307배경민",
               })
-                .then((e) => console.log("d", e))
+                .then(() => {
+                  toast.success("로그인 하였습니다!");
+                  Navigate("/home");
+                })
                 .catch((e) => console.log("ddd", e));
             }}
           />
