@@ -5,10 +5,13 @@ import Auth from "./pages/Auth";
 import Freind from "./pages/Friend";
 import Room from "./pages/Room";
 import Setting from "./pages/Setting";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <ToastContainer />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/auth" element={<Auth />} />
