@@ -9,12 +9,12 @@ interface ISideBarProps {
   children: ReactElement<any>;
 }
 
-const SideBar = (props: ISideBarProps) => {
+const SideBar = ({ title, index, children }: ISideBarProps) => {
   return (
     <S.MainContainer>
-      <SidebarHeader title={props.title} index={props.index} />
-      <S.SideBarContentsContainer>{props.children}</S.SideBarContentsContainer>
-      <SidebarFooter index={props.index} />
+      <SidebarHeader title={title} index={index} />
+      <S.SideBarContentsContainer>{children}</S.SideBarContentsContainer>
+      <SidebarFooter index={index} />
     </S.MainContainer>
   );
 };
