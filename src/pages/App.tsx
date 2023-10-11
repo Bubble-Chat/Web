@@ -8,11 +8,12 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { RecoilRoot } from "recoil";
 import { ThemeProvider } from "styled-components";
+import { Colors } from "../styles/theme";
 
 const Router = () => {
   return (
     <RecoilRoot>
-      <ThemeProvider theme={}>
+      <ThemeProvider theme={Colors}>
         <BrowserRouter>
           <ToastContainer />
           <Routes>
