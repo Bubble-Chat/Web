@@ -4,6 +4,7 @@ import FriendContentsBox from "../components/contentsBox/FriendContentsBox";
 import ContentsBox from "../components/contents/ContentsBox";
 import { useParams } from "react-router-dom";
 import MainBackground from "../components/contents/background/MainBackground";
+import Contents from "../components/common/Contents";
 
 interface Ivalue {
   name: string;
@@ -52,12 +53,14 @@ const Friend = () => {
         <>
           {value.map((val, index) => {
             return (
-              <FriendContentsBox
+              <Contents
                 key={index}
-                name={val.name}
-                introduce={val.introduce}
-                id={val.id}
-                idx={val.idx}
+                title={val.name}
+                context={val.introduce}
+                image=""
+                imageBorder={true}
+                titleFontSize={"20px"}
+                contextFontSize={"16px"}
               />
             );
           })}
