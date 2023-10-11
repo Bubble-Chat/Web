@@ -1,9 +1,9 @@
 import React from "react";
-import SideBar from "../components/common/sidebar/SideBar";
-import FriendContentsBox from "../components/common/contentsBox/FriendContentsBox";
-import ContentsBox from "../components/common/contents/ContentsBox";
+import SideBar from "../components/sidebar/SideBar";
+import FriendContentsBox from "../components/contentsBox/FriendContentsBox";
+import ContentsBox from "../components/contents/ContentsBox";
 import { useParams } from "react-router-dom";
-import MainBackground from "../components/common/contents/background/MainBackground";
+import MainBackground from "../components/contents/background/MainBackground";
 
 interface Ivalue {
   name: string;

@@ -1,5 +1,5 @@
 import React from "react";
-import { IContentsBoxProps } from "../../../types/IContentsBoxProps";
+import { IContentsBoxProps } from "../../types/IContentsBoxProps";
 import FriendBox from "./box/friend/FriendBox";
 import * as S from "./ContentsBox.style";
 import ChattingBox from "./box/room/ChattingBox";

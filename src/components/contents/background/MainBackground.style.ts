@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BackgroundImage from "../../../../asset/background.svg";
+import BackgroundImage from "../../../asset/background.svg";
 
 export const Background = styled.div`
   position: fixed;

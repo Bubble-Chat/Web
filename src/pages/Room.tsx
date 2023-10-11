@@ -1,7 +1,7 @@
 import React from "react";
-import SideBar from "../components/common/sidebar/SideBar";
-import RoomContentsBox from "../components/common/contentsBox/RoomContentsBox";
-import ContentsBox from "../components/common/contents/ContentsBox";
+import SideBar from "../components/sidebar/SideBar";
+import RoomContentsBox from "../components/contentsBox/RoomContentsBox";
+import ContentsBox from "../components/contents/ContentsBox";
 
 const Room = () => {
   return (

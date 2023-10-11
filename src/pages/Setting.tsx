@@ -1,7 +1,7 @@
 import React from "react";
-import SideBar from "../components/common/sidebar/SideBar";
+import SideBar from "../components/sidebar/SideBar";
 import * as S from "../styles/pages/Setting.style";
-import ContentsBox from "../components/common/contents/ContentsBox";
+import ContentsBox from "../components/contents/ContentsBox";
 
 const Setting = () => {
   return (

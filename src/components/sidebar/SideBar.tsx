@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import SidebarHeader from "./header/SidebarHeader";
-import * as S from "../../../styles/Sidebar.style";
+import * as S from "../../styles/Sidebar.style";
 import SidebarFooter from "./footer/SidebarFooter";
 
 interface ISideBarProps {

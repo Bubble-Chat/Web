@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./ContentsBox.style";
-import { IRoomContents } from "../../../types/IRoomContents";
+import { IRoomContents } from "../../types/IRoomContents";
 
 const RoomContentsBox = (props: IRoomContents) => {
   return (

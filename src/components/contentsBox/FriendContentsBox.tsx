@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./ContentsBox.style";
-import { IFriendContents } from "../../../types/IFriendContents";
+import { IFriendContents } from "../../types/IFriendContents";
 import { useNavigate } from "react-router-dom";
 
 const FriendContentsBox = (props: IFriendContents) => {
