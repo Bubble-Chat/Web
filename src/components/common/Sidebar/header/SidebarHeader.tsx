@@ -11,9 +11,9 @@ const SidebarHeader = (props: IHeaderProps) => {
     <S.MainHeaderContainer>
       <S.TitleElement>{props.title}</S.TitleElement>
       <S.IconContainer>
-        {props.index === 1 ? <S.IconElement /> : null}
-        {props.index !== 3 && props.index !== 4 ? <S.IconElement /> : null}
-        {props.index === 4 ? null : <S.IconElement />}
+        {props.index === 1 && <S.IconElement />}
+        {props.index !== 3 && props.index !== 4 && <S.IconElement />}
+        {props.index !== 4 && <S.IconElement />}
       </S.IconContainer>
     </S.MainHeaderContainer>
   );
