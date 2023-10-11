@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../components/sidebar/SideBar";
+import SideBar from "../components/common/Sidebar/SideBar";
 import FriendContentsBox from "../components/contentsBox/FriendContentsBox";
 import ContentsBox from "../components/contents/ContentsBox";
 import { useParams } from "react-router-dom";

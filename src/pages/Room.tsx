@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../components/sidebar/SideBar";
+import SideBar from "../components/common/Sidebar/SideBar";
 import RoomContentsBox from "../components/contentsBox/RoomContentsBox";
 import ContentsBox from "../components/contents/ContentsBox";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../components/sidebar/SideBar";
+import SideBar from "../components/common/Sidebar/SideBar";
 import * as S from "../styles/pages/Setting.style";
 import ContentsBox from "../components/contents/ContentsBox";
 
