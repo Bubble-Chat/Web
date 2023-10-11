@@ -3,11 +3,12 @@ import * as S from "./style";
 
 interface IIconProps {
   url: string;
-  isActive: boolean;
+  handler?: () => void;
+  isActive?: boolean;
 }
 
-const Icon = ({ url, isActive }: IIconProps) => {
-  return <S.Image src={url} alt="icon" isActive={isActive} />;
+const Icon = ({ url, handler, isActive }: IIconProps) => {
+  return <S.Image src={url} alt="icon" isActive={isActive} onClick={handler} />;
 };
 
 export default Icon;
