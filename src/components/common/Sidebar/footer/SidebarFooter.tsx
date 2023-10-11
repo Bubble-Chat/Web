@@ -1,33 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import * as S from "./Sidebar.style";
+import { useLocation, useNavigate } from "react-router-dom";
+import * as S from "./SidebarFooter.style";
+import Icon from "../../Icon";
+import ChatRoom from "../../../../asset/Icon/ChatRoom.svg";
+import Friends from "../../../../asset/Icon/Friends.svg";
+import Setting from "../../../../asset/Icon/Setting.svg";
 
 interface IFooterProps {
   index: number;
 }
-const SidebarFooter = (props: IFooterProps) => {
+const SidebarFooter = ({ index }: IFooterProps) => {
   const Navigate = useNavigate();
+  const Location = useLocation();
 
-  const [currentLoaction, setCurrentLocation] = useState<string>(
-    document.location.href.split("/")[3]
-  );
-  useEffect(() => {
-    setCurrentLocation(document.location.href.split("/")[3]);
-    console.log(currentLoaction);
-  });
   return (
     <S.MainFooterContainer>
-      <S.IconElement
-        isActive={currentLoaction === "home"}
-        onClick={() => Navigate("/home")}
+      <Icon
+        isActive={Location.pathname === "/home"}
+        url={ChatRoom}
+        handler={() => Navigate("/home")}
       />
-      <S.IconElement
-        isActive={currentLoaction === "rooms"}
-        onClick={() => Navigate("/rooms")}
+      <Icon
+        isActive={Location.pathname === "/rooms"}
+        url={Friends}
+        handler={() => Navigate("/rooms")}
       />
-      <S.IconElement
-        isActive={currentLoaction === "setting"}
-        onClick={() => Navigate("/setting")}
+      <Icon
+        isActive={Location.pathname === "/setting"}
+        url={Setting}
+        handler={() => Navigate("/setting")}
       />
     </S.MainFooterContainer>
   );
