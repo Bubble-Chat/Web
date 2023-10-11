@@ -9,6 +9,7 @@ export interface IContentsStyleProps {
 export const MainContiner = styled.div`
   max-width: 100%;
   padding: 20px;
+  display: flex;
   background-color: ${({ theme }) => theme.Content.UnActive};
   &:hover {
     background-color: ${({ theme }) => theme.Content.Hover};
@@ -21,13 +22,15 @@ export const MainContiner = styled.div`
 export const InfoImage = styled.div`
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  margin-right: 20px;
+  background-color: #d095ff;
   border-radius: ${({ imageBorder }: IContentsStyleProps) =>
     imageBorder ? "50%" : "10px"};
 `;
 
 export const InfoContextContents = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
 `;
 

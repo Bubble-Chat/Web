@@ -5,7 +5,7 @@ import { IContentsStyleProps } from "./style";
 interface IContentsProps extends IContentsStyleProps {
   title: string;
   context: string;
-  image: string;
+  image: string | null;
 }
 
 const Contents = ({
@@ -19,7 +19,7 @@ const Contents = ({
   return (
     <S.MainContiner>
       <S.InfoImage imageBorder={imageBorder}>
-        <img src={image} alt="df" />
+        {image && <img src={image} alt="df" />}
       </S.InfoImage>
       <S.InfoContextContents>
         <S.InfoTitle titleFontSize={titleFontSize}>{title}</S.InfoTitle>
