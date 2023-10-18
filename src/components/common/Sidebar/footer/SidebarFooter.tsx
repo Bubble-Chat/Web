@@ -6,27 +6,29 @@ import ChatRoom from "../../../../asset/Icon/ChatRoom.svg";
 import Friends from "../../../../asset/Icon/Friends.svg";
 import Setting from "../../../../asset/Icon/Setting.svg";
 
-interface IFooterProps {
-  index: number;
-}
-const SidebarFooter = ({ index }: IFooterProps) => {
+const SidebarFooter = () => {
   const Navigate = useNavigate();
   const Location = useLocation();
+
+  const getPathName = (pathname: string) => {
+    const spliceLocation = pathname.split("/");
+    return spliceLocation[1];
+  };
 
   return (
     <S.MainFooterContainer>
       <Icon
-        isActive={Location.pathname === "/home"}
+        isActive={getPathName(Location.pathname) === "home"}
         url={ChatRoom}
         handler={() => Navigate("/home")}
       />
       <Icon
-        isActive={Location.pathname === "/rooms"}
+        isActive={Location.pathname === "rooms"}
         url={Friends}
         handler={() => Navigate("/rooms")}
       />
       <Icon
-        isActive={Location.pathname === "/setting"}
+        isActive={Location.pathname === "setting"}
         url={Setting}
         handler={() => Navigate("/setting")}
       />

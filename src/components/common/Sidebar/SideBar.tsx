@@ -14,7 +14,7 @@ const SideBar = ({ title, index, children }: ISideBarProps) => {
     <S.MainContainer>
       <SidebarHeader title={title} index={index} />
       <S.SideBarContentsContainer>{children}</S.SideBarContentsContainer>
-      <SidebarFooter index={index} />
+      <SidebarFooter />
     </S.MainContainer>
   );
 };
