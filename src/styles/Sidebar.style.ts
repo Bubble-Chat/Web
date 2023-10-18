@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.nav`
-  position: fixed;
-  height: 100%;
-  width: 30%;
+  position: relative;
+  height: 100vh;
+  width: 35rem;
   overflow: hidden;
   background-color: white;
 `;
