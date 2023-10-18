@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import SideBar from "../common/Sidebar/SideBar";
 import Contents from "../common/Contents";
+import Info from "./Info";
 
 interface Ivalue {
   name: string;
@@ -45,7 +46,7 @@ const Friend = () => {
     },
   ];
   return (
-    <>
+    <div style={{ display: "flex" }}>
       <SideBar title="친구창" index={1}>
         <>
           {value.map((val, index) => {
@@ -64,7 +65,8 @@ const Friend = () => {
           })}
         </>
       </SideBar>
-    </>
+      {id && <Info />}
+    </div>
   );
 };
 
