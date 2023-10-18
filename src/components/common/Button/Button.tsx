@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import * as S from "./style";
 
 interface IButtonProps extends S.IButtonStyleProps {
   handler: () => void;
   disabled: boolean;
-  children: React.ReactElement;
+  children: ReactElement;
 }
 
 const Button = ({

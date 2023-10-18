@@ -3,12 +3,12 @@ import styled from "styled-components";
 type fontWeightUnion = "Bold" | "SemiBold" | "Medium" | "Light" | null;
 
 export interface IButtonStyleProps {
-  width: string | null;
-  padding: string | null;
-  fontSize: string | null;
-  fontWeight: fontWeightUnion;
-  radius: string | null;
-  margin: string | null;
+  width?: string | null;
+  padding?: string | null;
+  fontSize?: string | null;
+  fontWeight?: fontWeightUnion;
+  radius?: string | null;
+  margin?: string | null;
 }
 
 const getWeight = (fontWeight: fontWeightUnion) => {
@@ -36,6 +36,7 @@ export const Button = styled.button`
   margin: ${({ margin }: IButtonStyleProps) => margin};
   border: none;
   box-shadow: none;
+  color: white;
   background-color: ${({ theme }) => theme.Button.UnActive};
   &:hover {
     background-color: ${({ theme }) => theme.Button.Hover};
