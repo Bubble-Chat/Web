@@ -23,12 +23,12 @@ const SidebarFooter = () => {
         handler={() => Navigate("/home")}
       />
       <Icon
-        isActive={Location.pathname === "rooms"}
+        isActive={getPathName(Location.pathname) === "rooms"}
         url={Friends}
         handler={() => Navigate("/rooms")}
       />
       <Icon
-        isActive={Location.pathname === "setting"}
+        isActive={getPathName(Location.pathname) === "setting"}
         url={Setting}
         handler={() => Navigate("/setting")}
       />
