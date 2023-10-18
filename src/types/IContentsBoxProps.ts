@@ -7,6 +7,8 @@ export interface IContentsBoxProps {
   };
   room?: {
     title: string;
+    lastMessage: string;
+    PeopleNumber: number;
   };
   setting?: {
     title: string;
