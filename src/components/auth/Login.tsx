@@ -18,7 +18,8 @@ export const Login = () => {
                 email: "gmbae06@dgsw.hs.kr",
                 name: "2307배경민",
               })
-                .then(() => {
+                .then((e) => {
+                  localStorage.setItem("accessToken", e.data.accessToken);
                   toast.success("로그인 하였습니다!");
                   Navigate("/home");
                 })
