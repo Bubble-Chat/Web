@@ -7,8 +7,17 @@ interface IIconProps {
   isActive?: boolean;
 }
 
-const Icon = ({ url, handler, isActive }: IIconProps) => {
-  return <S.Image src={url} alt="icon" isActive={isActive} onClick={handler} />;
+const Icon = ({ url, handler, isActive, ...Iconprops }: IIconProps) => {
+  return (
+    <S.Image
+      src={url}
+      alt="icon"
+      className="pointer"
+      isActive={isActive}
+      onClick={handler}
+      {...Iconprops}
+    />
+  );
 };
 
 export default Icon;
