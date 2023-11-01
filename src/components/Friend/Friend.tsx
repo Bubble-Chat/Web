@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import SideBar from "../common/Sidebar/SideBar";
 import Contents from "../common/Contents";
 import Info from "./Info";
 import API from "../../util/Api";
-import Search from "./Search";
-import { useRecoilState } from "recoil";
-import { isActiveSearchAtom } from "../../store/friendAtom";
+import { getFriendList } from "../../asset/Apis/Friend";
 
 interface Ivalue {
   name: string;
@@ -17,8 +15,11 @@ interface Ivalue {
 
 const Friend = () => {
   const { id } = useParams();
-  const [isActiveSearch, setIsActiveSearch] =
-    useRecoilState<boolean>(isActiveSearchAtom);
+
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) getFriendList();
+  }, []);
+
   const value: Ivalue[] = [
     {
       name: "조근호",
@@ -71,7 +72,6 @@ const Friend = () => {
   ];
   return (
     <div style={{ display: "flex" }}>
-      {isActiveSearch && <Search setIsActiveSearch={setIsActiveSearch} />}
       <SideBar title="친구창" index={1}>
         <>
           {value.map((val, index) => {
