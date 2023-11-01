@@ -1,33 +1,33 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { relateFriend, searchFriend } from "../../../asset/Apis/Friend";
+import { relateFriend, searchFriend } from "../../../../asset/Apis/Friend";
 import * as S from "./style";
 
 const Search = ({
-  setIsActiveSearch,
+  setActive,
 }: {
-  setIsActiveSearch: Dispatch<SetStateAction<boolean>>;
+  setActive: Dispatch<SetStateAction<boolean>>;
 }) => {
-  //   const [name, setName] = useState<string>("");
+  const [name, setName] = useState<string>("");
   const [Email, setEmail] = useState<string>("");
 
-  //   const searchFriendHandler = () => {
-  //     if (name !== "") searchFriend(name);
-  //   };
+  const searchFriendHandler = () => {
+    if (name !== "") searchFriend(name);
+  };
   const relateFriendHandler = () => {
     if (Email !== "") relateFriend(Email);
   };
 
-  const setActiveSearch = () => {
-    setIsActiveSearch(false);
+  const setActiveModal = () => {
+    setActive(false);
   };
 
   return (
     <S.Container>
       <S.MainContentsBox>
-        <div onClick={setActiveSearch} className="pointer">
+        <div onClick={setActiveModal} className="pointer">
           X
         </div>
-        {/* <div>친구 찾기</div>
+        <div>친구 찾기</div>
         <input
           type="text"
           value={name}
@@ -35,7 +35,7 @@ const Search = ({
         />
         <button onClick={searchFriendHandler} className="pointer">
           찾기
-        </button> */}
+        </button>
         <div>친구 추가</div>
         <input
           type="text"
@@ -46,7 +46,7 @@ const Search = ({
           추가
         </button>
       </S.MainContentsBox>
-      <S.Container onClick={setActiveSearch}></S.Container>
+      <S.Container onClick={setActiveModal}></S.Container>
     </S.Container>
   );
 };
