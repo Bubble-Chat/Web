@@ -13,7 +13,9 @@ const searchFriend = (friendName: string) => {
 };
 
 const getFriendList = () => {
-  // API.null("/api/v1/friends/list").then((e) => console.log(e)).catch((e) => console.log(e));
+  API.get("/api/v1/friend/list")
+    .then((e) => console.log(e))
+    .catch((e) => console.log(e));
 };
 
-export { relateFriend, searchFriend };
+export { relateFriend, searchFriend, getFriendList };
