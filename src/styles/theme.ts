@@ -11,4 +11,5 @@ export const Colors = {
   },
   Content: { UnActive: "#ffffff", Hover: "#F8F0FF", Active: "#F5E8FF" },
   Icon: { UnActive: "#E6C6FF", Hover: "#D49CFF", Active: "#C67DFF" },
+  Gray: { G100: "#ffffff", G200: "#D9D9D9", G300: "#B1B1B1", G400: "#858585" },
 };
