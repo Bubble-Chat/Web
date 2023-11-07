@@ -19,12 +19,12 @@ const SidebarFooter = () => {
     <S.MainFooterContainer>
       <Icon
         isActive={getPathName(Location.pathname) === "home"}
-        url={ChatRoom}
+        url={Friends}
         handler={() => Navigate("/home")}
       />
       <Icon
         isActive={getPathName(Location.pathname) === "rooms"}
-        url={Friends}
+        url={ChatRoom}
         handler={() => Navigate("/rooms")}
       />
       <Icon
