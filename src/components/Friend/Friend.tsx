@@ -1,87 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import SideBar from "../common/Sidebar/SideBar";
 import Contents from "../common/Contents";
 import Info from "./Info";
 import API from "../../util/Api";
 import { getFriendList } from "../../asset/Apis/Friend";
-
-interface Ivalue {
-  name: string;
-  introduce: string;
-  id: string;
-  idx: number;
-}
+import { IFriendValue } from "./type";
 
 const Friend = () => {
   const { id } = useParams();
 
-  useEffect(() => {
-    if (localStorage.getItem("accessToken")) getFriendList();
-  }, []);
+  const [friendList, setFriendList] = useState<IFriendValue[]>([]);
 
-  const value: Ivalue[] = [
-    {
-      name: "조근호",
-      introduce: "안녕하세요 iOS싸개 입니다.",
-      id: "whqkrqkr1@icloud.com",
-      idx: 1,
-    },
-    {
-      name: "우영기",
-      introduce: "안녕하세요 안드싸개 입니다.",
-      id: "wkpark@gmail.com",
-      idx: 2,
-    },
-    {
-      name: "이재진",
-      introduce: "안녕하세요 서버싸개 입니다.",
-      id: "jaejin@gmail.com",
-      idx: 3,
-    },
-    {
-      name: "김민균",
-      introduce: "안녕하세요 안드싸개 입니다.",
-      id: "kimmin@gamil.com",
-      idx: 4,
-    },
-    {
-      name: "조근호",
-      introduce: "안녕하세요 iOS싸개 입니다.",
-      id: "whqkrqkr1@icloud.com",
-      idx: 1,
-    },
-    {
-      name: "우영기",
-      introduce: "안녕하세요 안드싸개 입니다.",
-      id: "wkpark@gmail.com",
-      idx: 2,
-    },
-    {
-      name: "이재진",
-      introduce: "안녕하세요 서버싸개 입니다.",
-      id: "jaejin@gmail.com",
-      idx: 3,
-    },
-    {
-      name: "김민균",
-      introduce: "안녕하세요 안드싸개 입니다.",
-      id: "kimmin@gamil.com",
-      idx: 4,
-    },
-  ];
+  useEffect(() => {
+    if (localStorage.getItem("accessToken"))
+      getFriendList().then((value) => setFriendList(value));
+  }, [localStorage.getItem("accessToken")]);
+
   return (
     <div style={{ display: "flex" }}>
       <SideBar title="친구창" index={1}>
         <>
-          {value.map((val, index) => {
+          {friendList.map((val, index) => {
             return (
               <Contents
                 key={index}
                 location="home"
                 contentIdx={val.idx}
-                title={val.name}
-                context={val.introduce}
+                title={val.friend.name}
+                context={val.friend.email}
                 imageBorder={true}
                 titleFontSize={"20px"}
                 contextFontSize={"16px"}
