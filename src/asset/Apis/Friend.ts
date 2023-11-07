@@ -1,21 +1,20 @@
 import API from "../../util/Api";
 
-const relateFriend = (friendEmail: string) => {
-  API.post("/api/v1/friend/relate", { friendEmail })
-    .then((e) => console.log(e))
-    .catch((e) => console.log(e));
+const relateFriend = async (friendEmail: string) => {
+  const { data } = await API.post("/api/v1/friend/relate", { friendEmail });
+  return data;
 };
 
-const searchFriend = (friendName: string) => {
-  API.get("/api/v1/user/search", { params: { name: friendName } })
-    .then((e) => console.log(e))
-    .catch((e) => console.log(e));
+const searchFriend = async (friendName: string) => {
+  const { data } = await API.get("/api/v1/user/search", {
+    params: { name: friendName },
+  });
+  return data;
 };
 
-const getFriendList = () => {
-  API.get("/api/v1/friend/list")
-    .then((e) => console.log(e))
-    .catch((e) => console.log(e));
+const getFriendList = async () => {
+  const { data } = await API.get("/api/v1/friend/list");
+  return data;
 };
 
 export { relateFriend, searchFriend, getFriendList };
